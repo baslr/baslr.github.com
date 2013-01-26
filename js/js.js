@@ -2,7 +2,7 @@
 (function() {
 
   ($(document)).ready(function() {
-    return ($('BUTTON I')).click(function() {
+    ($('BUTTON I')).click(function() {
       var res;
       res = ($(this)).hasClass('icon-folder-open');
       ($(this)).removeClass();
@@ -10,6 +10,16 @@
         return ($(this)).addClass('icon-folder-close');
       } else {
         return ($(this)).addClass('icon-folder-open');
+      }
+    });
+    return ($('BUTTON')).click(function() {
+      var res;
+      res = ($(this)).find('I').hasClass('icon-folder-open');
+      ($(this)).find('I').removeClass();
+      if (res) {
+        return ($(this)).find('I').addClass('icon-folder-close');
+      } else {
+        return ($(this)).find('I').addClass('icon-folder-open');
       }
     });
   });

@@ -3,7 +3,6 @@
 
   ($(document)).ready(function() {
     return ($('BUTTON I')).click(function() {
-      console.log(this);
       return ($(this)).toggleClass('icon-folder-open');
     });
   });

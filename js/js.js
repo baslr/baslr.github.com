@@ -3,7 +3,14 @@
 
   ($(document)).ready(function() {
     return ($('BUTTON I')).click(function() {
-      return ($(this)).toggleClass('icon-folder-open');
+      var res;
+      res = ($(this)).hasClass('icon-folder-open');
+      ($(this)).removeClass();
+      if (res) {
+        return ($(this)).addClass('icon-folder-close');
+      } else {
+        return ($(this)).addClass('icon-folder-open');
+      }
     });
   });
 

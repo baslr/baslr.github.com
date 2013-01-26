@@ -2,4 +2,10 @@
 ($ document).ready ->
   
   ($ 'BUTTON I').click ->
-    ($ @).toggleClass('icon-folder-open')
+    res = ($ @).hasClass 'icon-folder-open'
+    ($ @).removeClass()
+
+    if res      
+      ($ @).addClass('icon-folder-close')
+    else
+      ($ @).addClass('icon-folder-open')
